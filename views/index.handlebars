@@ -47,6 +47,23 @@
 	}
 	</script>
 
+	<!-- Date -->
+	<div class="ui-grid-b">
+
+		<!-- get yesterday -->
+		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='yesterday.html'">&lt</button>
+		<!-- end get yesterday -->
+
+		<!-- get today -->
+		<button id="dateToday.js" class="btn btn-primary btn-lg btn-responsive" onclick="window.location='calendar.html'">
+		Today
+		</button> <!-- end today -->
+
+		<!-- get tomorrow -->
+		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='tomorrow.html'">&gt</button>
+		<!-- end get tomorrow -->
+    </div> <!-- End of group of button for Date -->
+
  <h3 id="demo"></h3>
 
  <img id="pieChart" src="/css/progressBar.png" margin: 0 width=100%> </img>
@@ -119,7 +136,6 @@
 	</div>
 	</div><!-- /content -->
 ><!-- /page -->
-
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
