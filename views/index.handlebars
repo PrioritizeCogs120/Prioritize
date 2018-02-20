@@ -13,7 +13,7 @@
 </head> 
 <body>
 
-<!-- Start of first page -->
+<!-- Welcome page -->
 <div data-role="page" id="welcome">
 
 	<div data-role="header">
@@ -32,8 +32,8 @@
 
 </div>
 </div>
-
 <!-- Second page -->
+
 <div data-role = "page" id="mainPage">
 
 	<div data-role="header">
@@ -51,17 +51,18 @@
 	<div class="ui-grid-b">
 
 		<!-- get yesterday -->
-		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='yesterday.html'">&lt</button>
+		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='yesterday.html'">Yesterday</button>
 		<!-- end get yesterday -->
+
+		<!-- get tomorrow -->
+		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='tomorrow.html'">Tomorrow</button>
+		<!-- end get tomorrow -->
 
 		<!-- get today -->
 		<button id="dateToday.js" class="btn btn-primary btn-lg btn-responsive" onclick="window.location='calendar.html'">
-		Today
+		Calendar
 		</button> <!-- end today -->
-
-		<!-- get tomorrow -->
-		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='tomorrow.html'">&gt</button>
-		<!-- end get tomorrow -->
+		
     </div> <!-- End of group of button for Date -->
 
  <h3 id="demo"></h3>
@@ -85,61 +86,15 @@
 {{/each}}
 
 
-<a href="#addItem" data-role="button">Add Item</a>
-
-</div>
+<a href="add.html" data-role="button">Add Item</a>
 
 
-<!-- Start of third page -->
+<!-- /page -->
 
-<!-- /header -->
-<div data-role="page" id="addItem">
-
-
-	<div data-role="header">
-		<h1>Prioritize</h1>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-
-	<form id="addItemForm" role="form" method="get" action="/add">
-		<h3>Add the details for this expense!</h3>
-		
-	    <div class="form-group">
-	      <label for="name"> Item Name:</label>
-	      <input type="text" class="form-control" id="name" placeholder="Item Name" name="name">
-	    </div>
-
-	    <div class="form-group">
-	      <label for="price">Item Price:</label>
-	      <input type="text" class="form-control" id="item_price" placeholder="Item Price" name="price">
-	    </div>
-
-	    <fieldset data-role="controlgroup">
-			<legend>Categorize this expense:</legend>
-	     	<input type="radio" name="radio-choice" id="need" value="need" checked="checked" name="need"/>
-	     	<label for="need">Need</label>
-
-	     	<input type="radio" name="radio-choice" id="treat" value="treat" name="treat" />
-	     	<label for="treat">Treat</label>
-
-	     	<input type="radio" name="radio-choice" id="other" value="other" name = "other" />
-	     	<label for="other">Other</label>
-		</fieldset>
-
-	    <input type="submit" id="submitItem" class="btn btn-default" rel="external" value="Submit" onclick="window.location='#mainPage'"></input>
-
-
-	</form>
-
-
-	</div>
-	</div><!-- /content -->
-><!-- /page -->
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-<script src="/js/introHCI.js"></script>
+
 
 </body>
 </html>

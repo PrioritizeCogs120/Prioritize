@@ -1,11 +1,11 @@
-var data = require('../data.json');
+var data = require("../data.json");
 
 exports.addItem = function(req, res) {  
 	// Your code goes here
 	var newItem =  {
-		name: req.query.name,
-		price: req.query.price,
-		priority: req.query.radio
+		'name': req.query.name,
+		'price': req.query.price,
+		'priority': req.query.radio
 	};
 
 	console.log(newItem);
