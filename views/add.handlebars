@@ -12,14 +12,10 @@
 	<script src="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
 </head> 
 <body>
-<!-- Start of third page -->
-<a href="/mainpage">
-    <button id="Back" class="btn btn-default">Back</button>
-</a>
+
 <!-- /header -->
 <div data-role="page" id="addItem">
-
-
+    
 	<div data-role="header">
 		<h1>Prioritize</h1>
 	</div><!-- /header -->
@@ -50,9 +46,8 @@
 	     	<input type="radio" name="radio-choice" id="other" value="other" name = "other" />
 	     	<label for="other">Other</label>
 		</fieldset>
-
-	    <input type="submit" id="submitItem" class="btn btn-default" rel="external" value="Submit" onclick="window.location='#mainPage'"></input>
-
+		<a href="/mainpage" data-role="button" class="btn btn-default">Back and not save</a>
+		<a href="/mainpage" data-role="button" class="btn btn-default">Save</a>
 
 	</form>
 
@@ -61,8 +56,10 @@
 	</div><!-- /content -->
 
 </div>
+
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
+<script src="js/add.js"></script>
 
 </body>
 </html>

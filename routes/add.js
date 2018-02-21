@@ -11,6 +11,6 @@ exports.addItem = function(req, res) {
 	console.log(newItem);
 	
 	data.Items.push(newItem);
-	res.render('index', data);
+	res.render('add', data);
 }
 

@@ -13,8 +13,6 @@
 </head> 
 <body>
 
-<!-- Welcome page -->
-<div data-role="page" id="welcome">
 
 	<div data-role="header">
 		<h1>Prioritize</h1>
@@ -28,73 +26,17 @@
 		<form>
   			 <input type="range" name="slider" id="myBudget" value="25" min="0" max="100"  />
 		</form>
-		<a href="#mainPage" data-role="button" onclick="setBudget()">Submit</a>
+		<a href="/mainpage">
+
+			<button data-role="button" id="submit">Submit</button>
+        </a>
 
 </div>
-</div>
-<!-- Second page -->
-
-<div data-role = "page" id="mainPage">
-
-	<div data-role="header">
-		<h1>Prioritize</h1>
-	</div><!-- /header -->
-   <script>
-	function setBudget() {
-    var x = document.getElementById("myBudget").value;
-    var y = "Your budget for today is $" + x + ".00.";
-    document.getElementById("demo").innerHTML = y;
-	}
-	</script>
-
-	<!-- Date -->
-	<div class="ui-grid-b">
-
-		<!-- get yesterday -->
-		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='yesterday.html'">Yesterday</button>
-		<!-- end get yesterday -->
-
-		<!-- get tomorrow -->
-		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='tomorrow.html'">Tomorrow</button>
-		<!-- end get tomorrow -->
-
-		<!-- get today -->
-		<button id="dateToday.js" class="btn btn-primary btn-lg btn-responsive" onclick="window.location='calendar.html'">
-		Calendar
-		</button> <!-- end today -->
-		
-    </div> <!-- End of group of button for Date -->
-
- <h3 id="demo"></h3>
-
- <img id="pieChart" src="/css/progressBar.png" margin: 0 width=100%> </img>
-
-
-					<!-- The Item List -->
-
-{{#each Items}}
-<div class="itemDatabase">
-<ul data-role="listview" data-inset="true" >
-    <li><a href="#">
-		<h2>{{name}}</h2>
-		<p class="ui-li-aside"><strong>{{price}}</strong></p>
-		<p><i><strong>{{priority}}</strong></i></p>
-
-	</a></li>
-</ul>
-</div>
-{{/each}}
-
-
-<a href="add.html" data-role="button">Add Item</a>
-
-
-<!-- /page -->
 
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-
+<script src="js/index.js"></script>
 
 </body>
 </html>

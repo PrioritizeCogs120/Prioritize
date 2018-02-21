@@ -1,0 +1,70 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>My Page</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+
+
+
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+</head> 
+<body>
+
+
+<div data-role = "page" id="mainPage">
+
+	<div data-role="header">
+		<h1>Prioritize</h1>
+	</div><!-- /header -->
+
+
+	<!-- Date -->
+	<div class="ui-grid-b">
+
+		<!-- get yesterday -->
+		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='yesterday.html'">Yesterday</button>
+		<!-- end get yesterday -->
+
+		<!-- get tomorrow -->
+		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='tomorrow.html'">Tomorrow</button>
+		<!-- end get tomorrow -->
+
+		<!-- get today -->
+		<button id="dateToday.js" class="btn btn-primary btn-lg btn-responsive" onclick="window.location='calendar.html'">
+		Calendar
+		</button> <!-- end today -->
+		
+    </div> <!-- End of group of button for Date -->
+
+ <h3 id="demo"></h3>
+
+ <img id="pieChart" src="/css/progressBar.png" margin: 0 width=100%> </img>
+
+
+					<!-- The Item List -->
+
+{{#each Items}}
+<div class="itemDatabase">
+<ul data-role="listview" data-inset="true" >
+    <li><a href="#">
+		<h2>{{name}}</h2>
+		<p class="ui-li-aside"><strong>{{price}}</strong></p>
+		<p><i><strong>{{priority}}</strong></i></p>
+
+	</a></li>
+</ul>
+</div>
+{{/each}}
+
+
+<a href="/add" data-role="button">Add Item</a>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="js/mainpage.js"></script>
+
+</body>
+</html>
