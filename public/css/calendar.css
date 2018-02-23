@@ -41,3 +41,7 @@ td{
 td:hover{
   background:whitesmoke;
 }
+
+td style:hover{
+  background:gray;
+}
