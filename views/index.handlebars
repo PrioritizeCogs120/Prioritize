@@ -10,9 +10,23 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/index.css" rel="stylesheet">
 </head> 
 <body>
+    <div class="jumbotron">
+			<h1 id="username">Scott Klemmer</h1>
+			<p class="facebookLogin" id="logintext">
+				Please login through Facebook
+				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+			</fb:login-button>
+			</p>
+		</div>
 
+		<div id="facebookPhoto" class="profile">
+			<img id="photo" class='img-responsive' src=src="https://raw.githubusercontent.com/PrioritizeCogs120/Prioritize/master/public/images/DSC_0280.JPG" />
+		</div>
 
 	<div data-role="header">
 		<h1>Prioritize</h1>
@@ -37,6 +51,8 @@
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="js/index.js"></script>
+{{> facebook}}
+<script src="/js/facebook.js"></script>
 
 </body>
 </html>
