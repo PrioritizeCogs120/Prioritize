@@ -22,7 +22,7 @@
 
 	<div role="main" class="ui-content">
 
-	<form id="addItemForm" role="form" method="get" action="/add">
+	<form id="addItemForm" role="form" method="get" action="/itemAdded">
 		<h3>Add the details for this expense!</h3>
 		
 	    <div class="form-group">
@@ -32,7 +32,7 @@
 
 	    <div class="form-group">
 	      <label for="price">Item Price:</label>
-	      <input type="text" class="form-control" id="item_price" placeholder="Item Price" name="price">
+	      <input type="text" class="form-control" id="price" placeholder="Item Price starting with $" name="price">
 	    </div>
 
 	    <fieldset data-role="controlgroup">
@@ -47,7 +47,7 @@
 	     	<label for="other">Other</label>
 		</fieldset>
 		<a href="/mainpage" data-role="button" class="btn btn-default">Back and not save</a>
-		<a href="/mainpage" data-role="button" class="btn btn-default">Save</a>
+		<a href="/itemAdded" data-role="button" class="btn btn-default">Save</a>
 
 	</form>
 
