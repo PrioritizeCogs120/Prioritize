@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+	<title>Add Spending</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/addSpending.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	
+	<script src="js/introHCI.js"></script>
+     
+</head>
+
+<body>
+	<h1>Add Spending</h1>
+	<div class="budgetList">
+					{{#each itemDatabase}}
+					<ol><div class="itemData">
+						<p>{{item_name}}</p>
+						<p>{{item_price}}</p>
+						<p>Category: {{item_priority}}</p>
+					</div></ol>
+					{{/each}}
+
+					<form id="addItemForm" role="form" method="get" action="/add">
+		    			<div class="form-group">
+		     				 <label for="item_name">Item Name:</label>
+		      				<input type="text" class="form-control" id="item_name" placeholder="Input Name" name="item_name">
+		    			</div>
+		   				 <div class="form-group">
+		     			 	<label for="item_price">Price:</label>
+		      				<input type="text" class="form-control" id="item_price" placeholder="Input Number with $" name="item_price">
+		    			</div>
+		    			<div class="form-group">
+		     			 	<label for="item_priority">Motive:</label>
+		      				<p> Select your motive for this spending</p>
+		      				<select>
+                                <option value="physical needs">Physical needs</option>
+                                <option value="emotional needs">Emotional needs</option>
+                                <option value="To kill time">To kill time</option>
+                                <option value="A treat">A treat</option>
+                                <option value="A treat">Not clear</option>
+                            </select>
+		    			</div>
+		    			<input type="submit" id="submitBtn" class="btn btn-default" value="Add Item"></input>
+					</form>
+				</div>
+</body>
+</html>

@@ -1,43 +1,97 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-	<title>My Page</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+<!doctype html>
 
+<html>
+<head>
+	<title>Team Prioritize</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/introHCI.css" rel="stylesheet">
 
+	<!-- this is a comment in HTML -->
 
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
-	<script src="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
-</head> 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->        
+</head>
+
 <body>
+	<div class="container">
+		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+		<!-- p means paragraph -->
+		<div class="info"><h2><a href="info.html">&#9432</a></h2></div>
+		<div class="jumbotron">
+			<h1>Today's Budget</h1>
+			<!--<p>Date</p>
+			<button id="testjs" class="btn btn-primary btn-lg">Test Javascript</button>-->
+			<p>
+				<div class="btn-group-date">
+				<button class="btn btn-primary btn-lg">&lt</button>
+				<a href="calendar.html">
+					<button id="dateToday.js" class="btn btn-primary btn-lg">
+					<script type="text/javascript">
+						var d = new Date();
+						var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+						var monthname=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+						document.write(weekday[d.getDay()] + ", ");
+						document.write(monthname[d.getMonth()] + ". ");
+						document.write(d.getDate() + ", ");
+						document.write(d.getFullYear());
+					</script>
+					</button>
+				</a>
+				<button class="btn btn-primary btn-lg">&gt</button>
+				</div>
+			</P>
+			<p class="estimated_budget">
+				<button class="btn btn-primary btn-lg">Estimate your Budget!</button>
+			</p>
+		</div>
 
-<!-- Welcome page -->
-<div data-role="page" id="welcome">
+		<div class="project" id="project1">
+			<button class="btn btn-primary btn-lg">+</button>
+		</div>
+		<div class="project" id="project2">
+			<button class="btn btn-primary btn-lg">+</button>
+		</div>
+		<div class="project" id="project3">
+			<button class="btn btn-primary btn-lg">+</button>
+		</div>
+		<div class="project" id="project4">
+			<button class="btn btn-primary btn-lg">+</button>
+		</div>
+		<div class="project" id="project5">
+			<button class="btn btn-primary btn-lg">+</button>
+		</div>
+	</div>
 
-	<div data-role="header">
-		<h1>Prioritize</h1>
-	</div><!-- /header -->
+	<div class="btn-group-options">
+		<p>
+			<a href="account.html">
+				<button class="btn btn-primary btn-lg">
+					Account
+				</button>
+			</a>
+			<a href="log.html">
+				<button class="btn btn-primary btn-lg">
+					History Log
+				</button>
+			</a>
+			<a href="summary.html">
+				<button class="btn btn-primary btn-lg">
+					Summary
+				</button>
+			</a>
+		</p>	
+	</div>
 
-	<div role="main" class="ui-content">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	
-	<p>Welcome to the Prioritize app! Use mindfulness to make smart financial decisions! </p>
-	     
-	 <h3 class="ui-title">Set your budget for today:</h3>
-		<form>
-  			 <input type="range" name="slider" id="myBudget" value="25" min="0" max="100"  />
-		</form>
-		<a href="mainPage.handlebars" data-role="button" onclick="setBudget()">Submit</a>
-
-</div>
-</div>
-
-
-
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-
-
+	<script src="js/introHCI.js"></script>
 </body>
 </html>
