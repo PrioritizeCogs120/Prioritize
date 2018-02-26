@@ -5,7 +5,7 @@ exports.addItem = function(req, res) {
 	var newItem =  {
 		name: req.query.name,
 		price: req.query.price,
-		priority: req.query.radio
+		priority: req.query.priority
 	};
 
 	console.log(newItem);

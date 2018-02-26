@@ -9,6 +9,7 @@
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/calendar.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/calendar.js"></script>
 	<script src="js/introHCI.js"></script>
@@ -130,37 +131,44 @@
 			
 			events: [
 				{
-					id: 999,
-					title: 'Repeating Event',
-					start: new Date(y, m, d-3, 16, 0),
+					title: 'Get lit',
+					start: new Date(y, m, d-3, 22, 0),
+					end: new Date(y, m, d-2, 4, 0),
 					allDay: false,
 					className: 'info'
 				},
 				{
-					id: 999,
-					title: 'Repeating Event',
-					start: new Date(y, m, d+4, 16, 0),
+					title: 'Hit the clubz',
+					start: new Date(y, m, 10, 22, 0),
+					end: new Date(y, m, 11, 4, 0),
 					allDay: false,
 					className: 'info'
 				},
 				{
-					title: 'Meeting',
-					start: new Date(y, m, d, 10, 30),
-					allDay: false,
+					title: 'Flowers and Chocolate :)',
+					start: new Date(y, m, 14, 0, 0),
+					allDay: true,
 					className: 'info'
 				},
 				{
-					title: 'Lunch',
-					start: new Date(y, m, d, 12, 0),
-					end: new Date(y, m, d, 14, 0),
+					title: 'Providing myself a roof',
+					start: new Date(y, m, 2, 12, 0),
+					allDay: true,
+					className: 'info'
+				},
+				{
+					title: 'Lunch with old friends',
+					start: new Date(y, m, 6, 12, 0),
+					end: new Date(y, m, 6, 14, 0),
 					allDay: false,
-					className: 'important'
+					className: 'info'
 				},
 				{
 					title: 'Birthday Party',
 					start: new Date(y, m, d+1, 19, 0),
 					end: new Date(y, m, d+1, 22, 30),
 					allDay: false,
+					className: 'info'
 				},
 				{
 					title: 'Click for Google',

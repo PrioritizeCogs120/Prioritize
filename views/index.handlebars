@@ -75,7 +75,7 @@
 <ul data-role="listview" data-inset="true" >
     <li><a href="#">
 		<h2>{{name}}</h2>
-		<p class="ui-li-aside"><strong>{{price}}</strong></p>
+		<p class="ui-li-aside"><strong>${{price}}</strong></p>
 		<p><i><strong>{{priority}}</strong></i></p>
 
 	</a></li>
@@ -108,25 +108,26 @@
 		
 	    <div class="form-group">
 	      <label for="name"> Item Name:</label>
-	      <input type="text" class="form-control" id="name" placeholder="Item Name" name="name">
+	      <input type="text" class="form-control" id="item_name" placeholder="Item Name" name="name">
 	    </div>
 
 	    <div class="form-group">
 	      <label for="price">Item Price:</label>
-	      <input type="text" class="form-control" id="item_price" placeholder="Item Price" name="price">
+	      <input type="number" class="form-control" id="item_price" placeholder="e.g. 25.00" name="price" step=".01">
 	    </div>
-
-	    <fieldset data-role="controlgroup">
+	    <div class="form-group">
+	    <fieldset class"form-check" data-role="controlgroup">
 			<legend>Categorize this expense:</legend>
-	     	<input type="radio" name="radio-choice" id="need" value="need" checked="checked" name="need"/>
+	     	<input type="radio" name="priority" id="need" value="Need" checked="checked"/>
 	     	<label for="need">Need</label>
 
-	     	<input type="radio" name="radio-choice" id="treat" value="treat" name="treat" />
+	     	<input type="radio" name="priority" id="treat" value="Treat"/>
 	     	<label for="treat">Treat</label>
 
-	     	<input type="radio" name="radio-choice" id="other" value="other" name = "other" />
+	     	<input type="radio" name="priority" id="other" value="Other"/>
 	     	<label for="other">Other</label>
 		</fieldset>
+		</div>
 
 
 
@@ -143,7 +144,7 @@
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-<script src="/js/prioritize.js"></script>
+<script src="/js/introHCI.js"></script>
 
 </body>
 </html>
