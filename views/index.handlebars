@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
 
-
+	<link href="css/introHCI.css" rel="stylesheet">
 
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
@@ -83,9 +83,18 @@
     
  <h3 id="demo"></h3>
 
- <img id="pieChart" src="/css/progressBar.png" margin: 0 width=100%> </img>
+ <!--<img id="pieChart" src="/css/progressBar.png" margin: "0" width="100%"> </img>-->
 
-
+ <div id="page" class="page">
+  <div class="progress-bar">
+	  <canvas id="inactiveProgress" class="progress-inactive" height="275px" width="275px"></canvas>
+    <canvas id="activeProgress" class="progress-active"  height="275px" width="275px"></canvas>
+    <p>0%</p>
+  </div>
+  <div id="progressControllerContainer">
+    <input type="range" id="progressController" min="0" max="100" value="15" />
+  </div>
+</div>
 					<!-- The Item List -->
 
 {{#each Items}}
