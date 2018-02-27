@@ -18,24 +18,24 @@ function initializePage() {
 
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
-	$("a.thumbnail").click(projectClick)
-	$('.addbtn').click(recordEvent);
+	// $("a.thumbnail").click(projectClick)
+	$(".addbtn").click(recordEvent);
 }
 
-function projectClick(e) {
+//function projectClick(e) {
 	/*console.log("Project clicked");*/
-	e.preventDefault();
-	$(this).css("background-color", "#ff0000");
-	var containingProject = $(this).closest(".project");
-    var description = $(containingProject).find(".project-description");
-    if (description.length == 0) {
-       $(containingProject).append("<div class='project-description'><p>Description of the project.</p></div>");
-    } else {
-    	//$(this).fadeToggle("slow", "linear");
-    	$(".project-description").fadeToggle("slow", "linear");
-    	//description.html("<p>Stop clicking on me! You just did it at " + (new Date()) + "</p>");
-    }
-}
+	//e.preventDefault();
+// 	$(this).css("background-color", "#ff0000");
+// 	var containingProject = $(this).closest(".project");
+//     var description = $(containingProject).find(".project-description");
+//     if (description.length == 0) {
+//        $(containingProject).append("<div class='project-description'><p>Description of the project.</p></div>");
+//     } else {
+//     	//$(this).fadeToggle("slow", "linear");
+//     	$(".project-description").fadeToggle("slow", "linear");
+//     	//description.html("<p>Stop clicking on me! You just did it at " + (new Date()) + "</p>");
+//     }
+// }
 
 function goBack() {
     window.history.back();
@@ -43,6 +43,7 @@ function goBack() {
 
 function recordEvent(event) {
 	event.preventDefault();
+	console.log('clicked');
 	ga('create','UA-114588990-2','auto');
 	ga("send", "event", "add", "click");
 }
