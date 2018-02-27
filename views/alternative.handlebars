@@ -1,20 +1,6 @@
 <!DOCTYPE html> 
 <html> 
 <head> 
-	<!-- Google Analytics Content Experiment code -->
-<script>function utmx_section(){}function utmx(){}(function(){var
-k='170565909-1',d=document,l=d.location,c=d.cookie;
-if(l.search.indexOf('utm_expid='+k)>0)return;
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
-<!-- End of Google Analytics Content Experiment code -->
 	<title>My Page</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
@@ -66,63 +52,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     document.getElementById("demo").innerHTML = y;
 	}
 	</script>
-
-	{{#if viewAlt}}
 		<!-- Date -->
-	<div class="ui-grid-b">
-
-		<!-- get yesterday -->
-		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='yesterday.html'">&lt</button>
-		<!-- end get yesterday -->
-
-		<!-- get today -->
-		<button id="dateToday.js" class="btn btn-primary btn-lg btn-responsive" onclick="window.location='calendar.html'">
-		Today
-		</button> <!-- end today -->
-
-		<!-- get tomorrow -->
-		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='tomorrow.html'">&gt</button>
-		<!-- end get tomorrow -->
-    </div> <!-- End of group of button for Date -->
-    
- <h3 id="demo"></h3>
-
- 	<!-- Progress bar 
- 		https://codepen.io/cliffpyles/pen/xbsiC -->
-	 <div id="page" class="page">
-	  <div class="progress-bar">
-		  <canvas id="inactiveProgress" class="progress-inactive" height="275px" width="275px"></canvas>
-	    <canvas id="activeProgress" class="progress-active"  height="275px" width="275px"></canvas>
-	    <p>0%</p>
-	  </div><br />
-	  <div id="progressControllerContainer">
-	    <input type="range" id="progressController" min="0" max="100" value="15" />
-	  </div>
-	  <script src="/js/progressBar.js"></script>
-	</div>
-
-
-					<!-- The Item List -->
-
-{{#each Items}}
-<div class="itemDatabase">
-<ul data-role="listview" data-inset="true" >
-    <li><a href="#">
-		<h2>{{name}}</h2>
-		<p class="ui-li-aside"><strong>${{price}}</strong></p>
-		<p><i><strong>{{priority}}</strong></i></p>
-
-	</a></li>
-</ul>
-</div>
-
-{{/each}}
-
-<a href="#addItem" class="addbtn" data-role="button">Add Item</a>
-
-{{else}}
-
-<!-- Date -->
 	<div class="ui-grid-b">
 
 
@@ -131,7 +61,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		History
 		</button> <!-- end today -->
 
-		<a href="#addItem" class="addbtn" data-role="button">Add Item</a>
+		<a href="#addItem" data-role="button">Add Item</a>
 
     </div> <!-- End of group of button for Date -->
     
@@ -167,8 +97,10 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 </div>
 {{/each}}
 
-	{{/if}}
-</div><!-- /content -->
+
+
+	</div><!-- /content -->
+
 
 
 <!-- Start of third page -->
@@ -236,6 +168,5 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
   gtag('config', 'UA-114588990-2');
 </script>
-
 </body>
 </html>
