@@ -52,6 +52,8 @@
     document.getElementById("demo").innerHTML = y;
 	}
 	</script>
+
+	{{#if viewAlt}}
 		<!-- Date -->
 	<div class="ui-grid-b">
 
@@ -99,14 +101,60 @@
 	</a></li>
 </ul>
 </div>
-{{/each}}
 
+{{/each}}
 
 <a href="#addItem" data-role="button">Add Item</a>
 
+{{else}}
 
-	</div><!-- /content -->
+<!-- Date -->
+	<div class="ui-grid-b">
 
+
+		<!-- get today -->
+		<button id="dateToday.js" class="btn btn-primary btn-lg btn-responsive" onclick="window.location='calendar.html'">
+		History
+		</button> <!-- end today -->
+
+		<a href="#addItem" data-role="button">Add Item</a>
+
+    </div> <!-- End of group of button for Date -->
+    
+ <h3 id="demo"></h3>
+
+ 	<!-- Progress bar 
+ 		https://codepen.io/cliffpyles/pen/xbsiC -->
+	 <div id="page" class="page">
+	  <div class="progress-bar">
+		  <canvas id="inactiveProgress" class="progress-inactive" height="275px" width="275px"></canvas>
+	    <canvas id="activeProgress" class="progress-active"  height="275px" width="275px"></canvas>
+	    <p>0%</p>
+	  </div><br />
+	  <div id="progressControllerContainer">
+	    <input type="range" id="progressController" min="0" max="100" value="15" />
+	  </div>
+	  <script src="/js/progressBar.js"></script>
+	</div>
+
+
+					<!-- The Item List -->
+
+{{#each Items}}
+<div class="itemDatabase">
+<ul data-role="listview" data-inset="true" >
+    <li><a href="#">
+		<h2>{{name}}</h2>
+		<p class="ui-li-aside"><strong>${{price}}</strong></p>
+		<p><i><strong>{{priority}}</strong></i></p>
+
+	</a></li>
+</ul>
+</div>
+{{/each}}
+
+	{{/if}}
+</div><!-- /content -->
 
 
 <!-- Start of third page -->
@@ -165,6 +213,15 @@
 <script src="/js/introHCI.js"></script>
 {{> facebook}}
 <script src="/js/facebook.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114588990-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114588990-2');
+</script>
 
 </body>
 </html>
