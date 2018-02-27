@@ -43,7 +43,7 @@ function goBack() {
 
 function recordEvent(event) {
 	event.preventDefault();
-	ga('create','UA-114588990-1','auto');
+	ga('create','UA-114588990-2','auto');
 	ga("send", "event", "add", "click");
 }
 
