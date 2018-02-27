@@ -16,11 +16,10 @@ function statusChangeCallback(response) {
         console.log('Successfully logged in with Facebook');
          FB.api('/me?fields=name,first_name,picture.width(480)', changeUser);
   }
+}
 
-  function changeUser(response) {
-    $(".facebookLogin").hide();
-    
-    $("h1").text(response.name);
-    $("#photo").attr("src",response.picture.data.url);
-  }
+function changeUser(response) {
+  $(".facebookLogin").hide();
+  $("#name").text(response.name);
+  $("#photo").attr("src", response.picture.data.url);
 }
