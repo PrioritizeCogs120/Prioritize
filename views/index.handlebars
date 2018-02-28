@@ -20,7 +20,14 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 </script><script>utmx('url','A/B');</script>
 <!-- End of Google Analytics Content Experiment code -->
 	<title>My Page</title> 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="../_assets/css/jqm-demos.css">
+	<script src="../js/jquery.js"></script>
+	<script src="../_assets/js/index.js"></script>
+	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
 
 	<link href="css/progressBar.css" rel="stylesheet">
@@ -47,6 +54,9 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	<div role="main" class="ui-content">
 	
 	<p>Welcome to the Prioritize app! Use mindfulness to make smart financial decisions! </p>
+
+	<a href="#popup"  data-transition="pop">What's mindfulness?</a>
+
 	     
 	 <h3 class="ui-title">Set your budget for today:</h3>
 		<form>
@@ -56,6 +66,34 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 </div>
 </div>
+
+<div date-role = "page" id="popup" data-dialog = "true" data-rel = "dialog">
+
+
+	<div role="main">
+		<h2>Mindfulness</h2>
+
+
+		<p>What is mindfulness exactly? It’s awareness of the present moment—paying conscious attention to your environment and your internal state. When it comes to your budget, mindfulness can help with everything from curbing impulse buys to saving for long-term goals. </p>
+
+		<p>Most importantly, mindfulness lets you think of money management as an ongoing practice. Spending money wisely shouldn’t be an exercise in frustration, but a series of deliberate choices that reflect how you want to live your life. </p>
+
+		<p>Money management begins with an awareness of where you're spending your money. Mindful spending helps you ensure that your finances reflect your priorities.  </p>
+
+		<a href="moneyunder30.com">Source</a
+		
+
+		<p><a href="#welcome" data-rel="back" data-role="button">Back</a></p>
+	</div><!-- /content -->
+
+	
+</div>
+
+
+
+
+
+
 
 <!-- Second page -->
 <div data-role = "page" id="mainPage">
@@ -70,6 +108,10 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     document.getElementById("demo").innerHTML = y;
 	}
 	</script>
+
+
+	<a href="#welcome" class="addbtn" data-role="button">Go Back</a>
+
 
 	{{#if viewAlt}}
 		<!-- Date -->
