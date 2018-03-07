@@ -18,7 +18,7 @@ function initializePage() {
 
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
-	$("a.thumbnail").click(projectClick)
+	$(".addbtn").click(recordEvent);
 }
 
 function projectClick(e) {
@@ -38,6 +38,13 @@ function projectClick(e) {
 
 function goBack() {
     window.history.back();
+}
+
+function recordEvent(event) {
+	event.preventDefault();
+	console.log('clicked');
+	ga('create','UA-114588990-2','auto');
+	ga("send", "event", "add", "click");
 }
 
 

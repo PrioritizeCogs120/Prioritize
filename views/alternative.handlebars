@@ -4,12 +4,16 @@
 	<title>My Page</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-	<link href="css/progressBar.css" rel="stylesheet">
+	<!--<link href="css/progressBar.css" rel="stylesheet">-->
 
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head> 
 <body>
 
@@ -45,13 +49,7 @@
 	<div data-role="header">
 		<h1>Prioritize</h1>
 	</div><!-- /header -->
-   <script>
-	function setBudget() {
-    var x = document.getElementById("myBudget").value;
-    var y = "Your budget for today is $" + x + ".00.";
-    document.getElementById("demo").innerHTML = y;
-	}
-	</script>
+
 		<!-- Date -->
 	<div class="ui-grid-b">
 
@@ -65,21 +63,21 @@
 
     </div> <!-- End of group of button for Date -->
     
- <h3 id="demo"></h3>
+ <div id="demo" style="top:10px; bottom:10px"></div>
 
  	<!-- Progress bar 
  		https://codepen.io/cliffpyles/pen/xbsiC -->
-	 <div id="page" class="page">
-	  <div class="progress-bar">
-		  <canvas id="inactiveProgress" class="progress-inactive" height="275px" width="275px"></canvas>
-	    <canvas id="activeProgress" class="progress-active"  height="275px" width="275px"></canvas>
-	    <p>0%</p>
-	  </div><br />
-	  <div id="progressControllerContainer">
-	    <input type="range" id="progressController" min="0" max="100" value="15" />
-	  </div>
-	  <script src="/js/progressBar.js"></script>
-	</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar" style="width:25%">
+      Need
+    </div>
+    <div class="progress-bar progress-bar-warning" role="progressbar" style="width:5.25%">
+      Treat
+    </div>
+    <div class="progress-bar progress-bar-danger" role="progressbar" style="width:30%">
+      Other
+    </div>
+ </div>
 
 
 					<!-- The Item List -->
@@ -168,5 +166,13 @@
 
   gtag('config', 'UA-114588990-2');
 </script>
+
+<script>
+	function setBudget() {
+    var x = document.getElementById("myBudget").value;
+    var y = "Your budget for today is $" + x + ".00.";
+    document.getElementById("demo").innerHTML = y;
+	}
+	</script>
 </body>
 </html>
