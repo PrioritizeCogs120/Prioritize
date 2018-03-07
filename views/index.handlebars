@@ -48,7 +48,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 			</fb:login-button>
 			</p>
-		<h1>Prioritize</h1>
+		<h1>Mindful Budgeting</h1>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
@@ -80,7 +80,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 		<p>Money management begins with an awareness of where you're spending your money. Mindful spending helps you ensure that your finances reflect your priorities.  </p>
 
-		<a href="moneyunder30.com">Source</a
+		<a href="moneyunder30.com">Source</a>
 		
 
 		<p><a href="#welcome" data-rel="back" data-role="button">Back</a></p>
@@ -117,18 +117,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		<!-- Date -->
 	<div class="ui-grid-b">
 
-		<!-- get yesterday -->
-		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='yesterday.html'">&lt</button>
-		<!-- end get yesterday -->
-
 		<!-- get today -->
-		<button id="dateToday.js" class="btn btn-primary btn-lg btn-responsive" onclick="window.location='calendar.html'">
-		Today
-		</button> <!-- end today -->
-
-		<!-- get tomorrow -->
-		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='tomorrow.html'">&gt</button>
-		<!-- end get tomorrow -->
+		<a href="calendar.html" class="addbtn" data-role="button">Calendar</a>
     </div> <!-- End of group of button for Date -->
     
  <h3 id="demo"></h3>
@@ -137,12 +127,11 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
  		https://codepen.io/cliffpyles/pen/xbsiC -->
 	 <div id="page" class="page">
 	  <div class="progress-bar">
-		  <canvas id="inactiveProgress" class="progress-inactive" height="275px" width="275px"></canvas>
 	    <canvas id="activeProgress" class="progress-active"  height="275px" width="275px"></canvas>
 	    <p>0%</p>
 	  </div><br />
-	  <div id="progressControllerContainer">
-	    <input type="range" id="progressController" min="0" max="100" value="15" />
+	  <div id="progressControllerContainer" style="display: none;">
+	    <input type="range" id="progressController" min="0" max="100" value="15" style="display: none;"/>
 	  </div>
 	  <script src="/js/progressBar.js"></script>
 	</div>
@@ -173,9 +162,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 
 		<!-- get today -->
-		<button id="dateToday.js" class="btn btn-primary btn-lg btn-responsive" onclick="window.location='calendar.html'">
-		History
-		</button> <!-- end today -->
+		<a href="calendar.html" class="addbtn" data-role="button">Calendar</a>
+		<!-- end today -->
 
 		<a href="#addItem" class="addbtn" data-role="button">Add Item</a>
 
@@ -191,8 +179,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	    <canvas id="activeProgress" class="progress-active"  height="275px" width="275px"></canvas>
 	    <p>0%</p>
 	  </div><br />
-	  <div id="progressControllerContainer">
-	    <input type="range" id="progressController" min="0" max="100" value="15" />
+	  <div id="progressControllerContainer" style="display: none;">
+	    <input type="range" id="progressController" min="0" max="100" value="15" style="display: none;"/>
 	  </div>
 	  <script src="/js/progressBar.js"></script>
 	</div>
