@@ -39,6 +39,13 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	<script src="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+ <style>
+#demo {
+	font-size: 1.7em;
+	text-align: center;
+}
+</style>
 </head> 
 <body>
 
@@ -52,14 +59,14 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 			</fb:login-button>
 			</p>
-		<h1 style="font-size: 3em;">Prioritize</h1>
+		<h1 style="font-size: 2em;">Prioritize</h1>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
 	
-	<p>Welcome to the Prioritize app! Use mindfulness to make smart financial decisions! </p>
+	<b>Welcome to the Prioritize app! Use mindfulness to make smart financial decisions! </b>
 
-	<h2>Mindfulness</h2>
+	<h4 style="text-align: center;"><b><u>Mindfulness</u></b></h4>
 
 
 		<p>What is mindfulness exactly? It’s awareness of the present moment—paying conscious attention to your environment and your internal state. When it comes to your budget, mindfulness can help with everything from curbing impulse buys to saving for long-term goals. </p>
@@ -69,7 +76,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		<p>Money management begins with an awareness of where you're spending your money. Mindful spending helps you ensure that your finances reflect your priorities.  </p>
 
 	     
-	 <h3 class="ui-title">Set your budget for today:</h3>
+	 <h4 class="ui-title">Set your budget for today:</h4>
 		<form>
 			$
   			 <input type="range" name="slider" id="myBudget" value="100" min="0" max="100"/>
@@ -86,7 +93,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 <div data-role = "page" id="mainPage">
 
 	<div data-role="header">
-		<h1 style="font-size: 3em;">Prioritize</h1>
+		<h1 style="font-size: 2em;">Prioritize</h1>
 	</div><!-- /header -->
 
 	<a href="#welcome" class="addbtn" data-role="button">Back</a>
@@ -106,7 +113,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		<a href="tomorrow.html" class="addbtn" data-role="button">&gt</a>
 		<!-- end get tomorrow -->
     
- <div id="demo"></div>
+ <div id="demo" style="padding: 20px;"></div>
 
  	<!-- Progress bar 
  		https://codepen.io/cliffpyles/pen/xbsiC -->
@@ -161,7 +168,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 		<a href="#addItem" class="addbtn" data-role="button">Add Item</a>
 
-    <div id="demo"></div>
+    <div id="demo" style="padding: 20px;"></div>
 
  	<!-- Progress bar 
  		https://codepen.io/cliffpyles/pen/xbsiC -->
@@ -219,7 +226,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		<p>
 			<a href="#mainPage" data-role="button">Go home</a></p>
 		</p>
-		<h1 style="font-size: 3em;">Prioritize</h1>
+		<h1 style="font-size: 2em;">Prioritize</h1>
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
@@ -281,7 +288,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 <script>
 	function setBudget() {
     var x = document.getElementById("myBudget").value;
-    var y = "Your budget for today is $" + x + ".00.";
+    var y = "Today's Budget: $" + x + ".00.";
     document.getElementById("demo").innerHTML = y;
 	}
 </script>
