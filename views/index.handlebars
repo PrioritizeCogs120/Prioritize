@@ -27,6 +27,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	<script src="../js/jquery.js"></script>
 	<script src="../_assets/js/index.js"></script>
 	<script src="../js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="../css/introHCI.css"></script>
 
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
 
@@ -55,7 +56,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	
 	<p>Welcome to the Prioritize app! Use mindfulness to make smart financial decisions! </p>
 
-	<a href="#popup"  data-transition="pop">What's mindfulness?</a>
+	<a href="#popup" data-rel = "dialog" data-transition="pop">What's mindfulness?</a>
 
 	     
 	 <h3 class="ui-title">Set your budget for today:</h3>
@@ -67,7 +68,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 </div>
 </div>
 
-<div date-role = "page" id="popup" data-dialog = "true" data-rel = "dialog">
+<div data-role = "page" id="popup" data-dialog = "true" data-rel = "dialog">
 
 
 	<div role="main">
@@ -110,15 +111,21 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	</script>
 
 
-	<a href="#welcome" class="addbtn" data-role="button">Go Back</a>
+	<a href="#welcome" class="addbtn" data-role="button">Back</a>
 
 
 	{{#if viewAlt}}
 		<!-- Date -->
 	<div class="ui-grid-b">
 
+<<<<<<< HEAD
 		<!-- get today -->
 		<a href="calendar.html" class="addbtn" data-role="button">Calendar</a>
+=======
+				<a href="calendar.html" class="addbtn" data-role="button">History</a>
+
+		<!-- end get tomorrow -->
+>>>>>>> 16241ffb0f9d5f2b3cdd9b72f70aa7cb6b6141f8
     </div> <!-- End of group of button for Date -->
     
  <h3 id="demo"></h3>
@@ -130,9 +137,12 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	    <canvas id="activeProgress" class="progress-active"  height="275px" width="275px"></canvas>
 	    <p>0%</p>
 	  </div><br />
+<<<<<<< HEAD
 	  <div id="progressControllerContainer" style="display: none;">
 	    <input type="range" id="progressController" min="0" max="100" value="15" style="display: none;"/>
 	  </div>
+=======
+>>>>>>> 16241ffb0f9d5f2b3cdd9b72f70aa7cb6b6141f8
 	  <script src="/js/progressBar.js"></script>
 	</div>
 
@@ -158,16 +168,21 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 {{else}}
 
 <!-- Date -->
-	<div class="ui-grid-b">
 
 
+<<<<<<< HEAD
 		<!-- get today -->
 		<a href="calendar.html" class="addbtn" data-role="button">Calendar</a>
 		<!-- end today -->
+=======
+	
+
+		<a href="calendar.html" class="addbtn" data-role="button">History</a>
+
+>>>>>>> 16241ffb0f9d5f2b3cdd9b72f70aa7cb6b6141f8
 
 		<a href="#addItem" class="addbtn" data-role="button">Add Item</a>
 
-    </div> <!-- End of group of button for Date -->
     
  <h3 id="demo"></h3>
 
@@ -264,6 +279,8 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 {{> facebook}}
 <script src="/js/facebook.js"></script>
 <script src="/js/index.js"></script>
+	<script src="../css/introHCI.css"></script>
+
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114588990-2"></script>
 <script>
