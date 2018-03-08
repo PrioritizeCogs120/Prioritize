@@ -39,6 +39,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	<script src="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="js/calendar.js"></script>
 
  <style>
 #demo {
@@ -101,17 +102,22 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 	{{#if viewAlt}}
 		<!-- Date -->
-
+		<div data-role="controlgroup">
+		<div data-type="horizontal">
 		<!-- get yesterday -->
 		<a href="yesterday.html" class="addbtn" data-role="button">&lt</a>
 		<!-- end get yesterday -->
 
 		<!-- get today -->
-		<a href="calendar.html" class="addbtn" data-role="button" onClick="window.location.href">Calendar</a> <!-- end today -->
+			<button id="dateToday.js" class="btn btn-primary btn-lg btn-responsive" onclick="window.location='calendar.html'">
+			Calendar
+			</button><!-- end today -->
 
 		<!-- get tomorrow -->
 		<a href="tomorrow.html" class="addbtn" data-role="button">&gt</a>
 		<!-- end get tomorrow -->
+		</div>
+		</div>
     
  <div id="demo" style="padding: 20px;"></div>
 
@@ -128,14 +134,15 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	  </div>
 	  <script src="/js/progressBar.js"></script>
 	</div>-->
-<div class="progress">
-    <div class="progress-bar progress-bar-success" role="progressbar" style="width:25%">
+
+<div class="progress" style="margin-bottom:0; height: 20px;">
+    <div class="progress-bar progress-bar-success" role="progressbar" style="width:25%; height: 20px;">
       Need
     </div>
-    <div class="progress-bar progress-bar-warning" role="progressbar" style="width:5.25%">
+    <div class="progress-bar progress-bar-warning" role="progressbar" style="width:5.25%; height: 20px;">
       Treat
     </div>
-    <div class="progress-bar progress-bar-danger" role="progressbar" style="width:30%">
+    <div class="progress-bar progress-bar-danger" role="progressbar" style="width:30%; height: 20px;">
       Other
     </div>
  </div>
@@ -145,7 +152,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 {{#each Items}}
 <div class="itemDatabase">
-<ul data-role="listview" data-inset="true" >
+<ul data-role="listview" data-inset="true" data-icon="delete">
     <li><a href="#">
 		<h2>{{name}}</h2>
 		<p class="ui-li-aside"><strong>${{price}}</strong></p>
@@ -164,9 +171,14 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 <!-- Date -->
 
 		<!-- get today -->
-		<a href="calendar.html" class="addbtn" data-role="button">Calendar</a> <!-- end today -->
+		<div>
+			<button id="dateToday.js" class="btn btn-primary btn-lg btn-responsive" onclick="window.location='calendar.html'">
+			Calendar
+			</button>
+		<!-- end today -->
 
 		<a href="#addItem" class="addbtn" data-role="button">Add Item</a>
+		</div>
 
     <div id="demo" style="padding: 20px;"></div>
 
@@ -184,14 +196,14 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	  <script src="/js/progressBar.js"></script>
 	</div>-->
 
-<div class="progress">
-    <div class="progress-bar progress-bar-success" role="progressbar" style="width:25%">
+<div class="progress" style="margin-bottom:0; height: 20px;">
+    <div class="progress-bar progress-bar-success" role="progressbar" style="width:25%; height: 20px;">
       Need
     </div>
-    <div class="progress-bar progress-bar-warning" role="progressbar" style="width:5.25%">
+    <div class="progress-bar progress-bar-warning" role="progressbar" style="width:5.25%; height: 20px;">
       Treat
     </div>
-    <div class="progress-bar progress-bar-danger" role="progressbar" style="width:30%">
+    <div class="progress-bar progress-bar-danger" role="progressbar" style="width:30%; height: 20px;">
       Other
     </div>
  </div>
@@ -201,7 +213,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 {{#each Items}}
 <div class="itemDatabase">
-<ul data-role="listview" data-inset="true" >
+<ul data-role="listview" data-inset="true" data-icon="delete">
     <li><a href="#">
 		<h2>{{name}}</h2>
 		<p class="ui-li-aside"><strong>${{price}}</strong></p>
@@ -259,7 +271,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 
 
-	    <input type="submit" id="submitItem" class="btn btn-default" value="Submit"></input>
+	    <input type="submit" id="submitItem" class="btn btn-default"value="Submit"></input>
 
 
 	</form>
