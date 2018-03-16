@@ -1,16 +1,23 @@
-var data = require('../data.json');
+var data = require("../data.json");
 
-exports.addItem = function(req, res) {  
-	// Your code goes here
-	var newItem =  {
-		name: req.query.name,
-		price: req.query.price,
-		priority: req.query.priority
-	};
-
-	console.log(newItem);
-	
-	data.Items.push(newItem);
-	res.render('index', data);
+exports.view = function(req,res) {
+	res.render('add');
 }
+
+exports.addExpense = function(req, res) {   
+	console.log("add expense");
+	var name = req.body.name;
+	var price = "$" + req.body.price;
+	var category = req.body.category;
+    var newExpense = {"name" : name,"price" : price,"category": category};
+    data.Items.push(newExpense);
+	res.json(data);
+}
+
+exports.newView = function(req, res) {  
+    console.log("render mainpage");  
+	res.render('mainpage', data);	
+}
+
+
 

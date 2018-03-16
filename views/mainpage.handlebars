@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<title>My Page</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="js/calendar.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/mainpage.css">
+</head> 
+<body>
+    
+<div data-role="header">
+<!-- 		<a href="/" class="addbtn" data-role="button">Back</a> -->
+<button class="addbtn" onclick="window.location='/'">Back</button> </br>
+		<h1 style="font-size: 2em;">Mind Bud</h1>
+	</div><!-- /header -->
+
+	<!-- get today -->
+	<div class="goal" style="text-align: center;">
+	    <h3><strong>Your goal today is</strong></h3>
+        <h3 id="budget"></h3>
+    </div>
+
+		<div>
+			<button id="dateToday.js" class="btn btn-primary btn-lg btn-responsive" onclick="window.location='calendar.html'">
+			Calendar
+			</button>
+		<!-- end today -->
+
+		<!-- <a href="/add" class="addbtn" data-role="button">Add Item</a> -->
+		<button class="btn btn-primary btn-lg btn-responsive" onclick="window.location='/add'">Add Item</button>
+		</div>
+
+<div class="progress" style="margin-bottom:0; height: 20px;">
+    <div class="progress-bar progress-bar-success" role="progressbar" style="width:35%; height: 20px;">
+      Need
+    </div>
+    <div class="progress-bar progress-bar-warning" role="progressbar" style="width:15.25%; height: 20px;">
+      Treat
+    </div>
+    <div class="progress-bar progress-bar-danger" role="progressbar" style="width:20%; height: 20px;">
+      Other
+    </div>
+ </div>
+
+					<!-- The Item List -->
+
+{{#each Items}}
+<div class="itemDatabase">
+<ul data-role="listview" data-inset="true" data-icon="delete">
+    <li><a href="/add">
+		<h2>{{name}}</h2>
+		<p class="ui-li-aside"><strong>{{price}}</strong></p>
+		<p><i><strong>{{category}}</strong></i></p>
+
+	</a></li>
+</ul>
+</div>
+{{/each}}
+
+<!-- New Item -->
+<!-- <div class="newElement">
+<ul data-role="listview" data-inset="true" >
+    <li><a href="/add">
+		<h2 id="newName"></h2>
+		<p class="ui-li-aside" id="newPrice"><strong></strong></p>
+		<p id="newCategory"><i><strong></strong></i></p>
+	</a></li>
+</ul>
+</div> -->
+<!-- <a href="/add" data-role="button">Add Item</a> -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="js/mainpage.js"></script>
+
+</body>
+</html>

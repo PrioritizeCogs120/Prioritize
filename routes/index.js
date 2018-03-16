@@ -1,15 +1,7 @@
 
-var data = require('../data.json');
-
 /*
- * GET home page.
+ * GET welcome page.
  */
 exports.view = function(req, res){
-  	res.render('index', data);
-  	data["viewAlt"] = false;
-};
-
-exports.viewAlt = function(req, res){
-  	res.render('index', data);
-  	data["viewAlt"] = true;
+  	res.render('index');
 };

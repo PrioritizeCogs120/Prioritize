@@ -9,6 +9,7 @@ var path = require('path');
 var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
+var mainpage = require('./routes/mainpage');
 var add = require('./routes/add');
 // Example route
 // var user = require('./routes/user');
@@ -28,7 +29,6 @@ app.use(express.methodOverride());
 app.use(express.cookieParser('IxD secret key'));
 app.use(express.session());
 app.use(app.router);
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
@@ -37,8 +37,10 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/add', add.addItem);
-app.get('/viewAlt', index.viewAlt);
+app.get('/mainpage', mainpage.view);
+app.get('/add', add.view);
+app.post('/expenseAdded', add.addExpense);
+app.get('/newAdd', add.newView);
 // Example route
 // app.get('/users', user.list);
 

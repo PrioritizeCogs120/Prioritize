@@ -13,7 +13,7 @@
 (function($, undefined) {
 
 
-;
+;;
 
 var defaults = {
 
@@ -113,7 +113,7 @@ var rtlDefaults = {
 
 
 
-;
+;;
 
 var fc = $.fullCalendar = { version: "1.6.4" };
 var fcViews = fc.views = {};
@@ -182,7 +182,7 @@ function setDefaults(d) {
 
 
 
-;
+;;
 
  
 function Calendar(element, options, eventSources) {
@@ -720,7 +720,7 @@ function Calendar(element, options, eventSources) {
 
 }
 
-;
+;;
 
 function Header(calendar, options) {
 	var t = this;
@@ -880,7 +880,7 @@ function Header(calendar, options) {
 
 }
 
-;
+;;
 
 fc.sourceNormalizers = [];
 fc.sourceFetchers = [];
@@ -1296,7 +1296,7 @@ function EventManager(options, _sources) {
 
 }
 
-;
+;;
 
 
 fc.addDays = addDays;
@@ -1674,7 +1674,7 @@ function iso8601Week(date) {
 }
 
 
-;
+;;
 
 fc.applyAll = applyAll;
 
@@ -1941,7 +1941,7 @@ function firstDefined() {
 }
 
 
-;
+;;
 
 fcViews.month = MonthView;
 
@@ -2005,7 +2005,7 @@ function MonthView(element, calendar) {
 	
 }
 
-;
+;;
 
 fcViews.basicWeek = BasicWeekView;
 
@@ -2060,7 +2060,7 @@ function BasicWeekView(element, calendar) {
 	
 }
 
-;
+;;
 
 fcViews.basicDay = BasicDayView;
 
@@ -2102,7 +2102,7 @@ function BasicDayView(element, calendar) {
 	
 }
 
-;
+;;
 
 setDefaults({
 	weekMode: 'fixed'
@@ -2624,7 +2624,7 @@ function BasicView(element, calendar, viewName) {
 	
 }
 
-;
+;;
 
 function BasicEventRenderer() {
 	var t = this;
@@ -2653,7 +2653,7 @@ function BasicEventRenderer() {
 
 }
 
-;
+;;
 
 fcViews.agendaWeek = AgendaWeekView;
 
@@ -2707,7 +2707,7 @@ function AgendaWeekView(element, calendar) {
 
 }
 
-;
+;;
 
 fcViews.agendaDay = AgendaDayView;
 
@@ -2749,7 +2749,7 @@ function AgendaDayView(element, calendar) {
 
 }
 
-;
+;;
 
 setDefaults({
 	allDaySlot: true,
@@ -3645,7 +3645,7 @@ function AgendaView(element, calendar, viewName) {
 
 }
 
-;
+;;
 
 function AgendaEventRenderer() {
 	var t = this;
@@ -4534,7 +4534,7 @@ function compareSlotSegs(seg1, seg2) {
 }
 
 
-;
+;;
 
 
 function View(element, calendar, viewName) {
@@ -5076,7 +5076,7 @@ function View(element, calendar, viewName) {
 
 }
 
-;
+;;
 
 function DayEventRenderer() {
 	var t = this;
@@ -5829,7 +5829,7 @@ function compareDaySegments(a, b) {
 }
 
 
-;
+;;
 
 //BUG: unselect needs to be triggered when events are dragged+dropped
 
@@ -5929,7 +5929,7 @@ function SelectionManager() {
 
 }
 
-;
+;;
  
 function OverlayManager() {
 	var t = this;
@@ -5968,7 +5968,7 @@ function OverlayManager() {
 
 }
 
-;
+;;
 
 function CoordinateGrid(buildFunc) {
 
@@ -6016,7 +6016,7 @@ function CoordinateGrid(buildFunc) {
 
 }
 
-;
+;;
 
 function HoverListener(coordinateGrid) {
 
@@ -6076,7 +6076,7 @@ function _fixUIEvent(event) { // for issue 1168
 		event.pageY = event.originalEvent.pageY;
 	}
 }
-;
+;;
 
 function HorizontalPositionCache(getElement) {
 
@@ -6105,6 +6105,6 @@ function HorizontalPositionCache(getElement) {
 	
 }
 
-;
+;;
 
 })(jQuery);

@@ -1,299 +1,52 @@
 <!DOCTYPE html> 
-
 <html> 
 <head> 
-
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-
-	<!-- Google Analytics Content Experiment code -->
-<script>function utmx_section(){}function utmx(){}(function(){var
-k='170565909-1',d=document,l=d.location,c=d.cookie;
-if(l.search.indexOf('utm_expid='+k)>0)return;
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
-<!-- End of Google Analytics Content Experiment code -->
 	<title>My Page</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!--<link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.5.min.css">
-	<link rel="stylesheet" href="../_assets/css/jqm-demos.css">
-	<script src="../js/jquery.js"></script>
-	<script src="../_assets/js/index.js"></script>
-	<script src="../js/jquery.mobile-1.4.5.min.js"></script>-->
-
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-	<!--<link href="css/progressBar.css" rel="stylesheet">-->
-
-
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  	<script src="js/calendar.js"></script>
-
- <style>
-#demo {
-	font-size: 1.7em;
-	text-align: center;
-}
-</style>
 </head> 
 <body>
 
-<!-- Start of first page -->
-<div data-role="page" id="welcome">
+<div data-role="header">
+	<h1 id="username"></h1>
+	<a href="login.html" data-role="button">Login</a>
+	<p class="facebookLogin" id="logintext">
+		or with Facebook
+		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+	    </fb:login-button>
+	</p>
+	<h1 style="font-size: 2em;">Mind Bud</h1>
+</div><!-- /header -->
 
-	<div data-role="header">
-		<h1 id="username"></h1>
-		<a href="login.html" data-role="button">Login</a>
-			<p class="facebookLogin" id="logintext">
-				or with Facebook
-				<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-			</fb:login-button>
-			</p>
-		<h1 style="font-size: 2em;">Mind Bud</h1>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-	
-	<b>Welcome to the Mind Bud app! Use mindfulness to make smart financial decisions! </b>
+<div role="main" class="ui-content">
+    <p class="intro"><strong>Welcome to the Mind Bud app! </strong></p>
+    <p id="left"><strong>Use mindfulness to make smart financial decisions today! </strong></p>
 
 	<h4 style="text-align: center;"><b><u>Mindfulness</u></b></h4>
 
-
-		<p>What is mindfulness exactly? It’s awareness of the present moment—paying conscious attention to your environment and your internal state. When it comes to your budget, mindfulness can help with everything from curbing impulse buys to saving for long-term goals. </p>
-
-		<p>Most importantly, mindfulness lets you think of money management as an ongoing practice. Spending money wisely shouldn’t be an exercise in frustration, but a series of deliberate choices that reflect how you want to live your life. </p>
-
-		<p>Money management begins with an awareness of where you're spending your money. Mindful spending helps you ensure that your finances reflect your priorities.  </p>
-
+		<p class="intro">What is mindfulness exactly? It’s awareness of the <strong>present moment</strong>—paying conscious attention to your environment and your internal state. When it comes to your budget, mindfulness can help with everything from <strong>curbing impulse buys </strong>to<strong> saving for long-term goals</strong>. </p>
+	
+	
+<!-- 		<p class="intro">Money management begins with an awareness of where you're spending your money. Mindful spending helps you ensure that your finances reflect your priorities.  </p> -->
 	     
 	 <h4 class="ui-title">Set your budget for today:</h4>
 		<form>
 			$
   			 <input type="range" name="slider" id="myBudget" value="100" min="0" max="100"/>
 		</form>
-		<a href="#mainPage" data-role="button" onclick="setBudget()">Submit</a>
+			<button data-role="button" onclick="saveBudget()" id="submitB">Submit</button>
 
 </div>
-</div>
-
-
-</div>
-
-<!-- Second page -->
-<div data-role = "page" id="mainPage">
-
-	<div data-role="header">
-		<a href="#welcome" class="addbtn" data-role="button">Back</a>
-		<h1 style="font-size: 2em;">Mind Bud</h1>
-	</div><!-- /header -->
-
-
-	{{#if viewAlt}}
-		<!-- Date -->
-		<div id="demo" style="padding: 20px;"></div>
-		<div data-role="controlgroup">
-		<div data-type="horizontal">
-
-		<!-- get today -->
-			<button id="dateToday.js" class="btn btn-primary btn-lg btn-responsive" onclick="window.location='calendar.html'">
-			Calendar
-			</button><!-- end today -->
-		</div>
-		</div>
-    
-
- 	<!-- Progress bar 
- 		https://codepen.io/cliffpyles/pen/xbsiC -->
-	 <!--<div id="page" class="page">
-	  <div class="progress-bar">
-		  <canvas id="inactiveProgress" class="progress-inactive" height="275px" width="275px"></canvas>
-	    <canvas id="activeProgress" class="progress-active"  height="275px" width="275px"></canvas>
-	    <p>0%</p>
-	  </div><br />
-	  <div id="progressControllerContainer" style="display: none;">
-	    <input type="range" id="progressController" min="0" max="100" value="15" />
-	  </div>
-	  <script src="/js/progressBar.js"></script>
-	</div>-->
-
-<div class="progress" style="margin-bottom:0; height: 20px;">
-    <div class="progress-bar progress-bar-success" role="progressbar" style="width:25%; height: 20px;">
-      Need
-    </div>
-    <div class="progress-bar progress-bar-warning" role="progressbar" style="width:5.25%; height: 20px;">
-      Treat
-    </div>
-    <div class="progress-bar progress-bar-danger" role="progressbar" style="width:30%; height: 20px;">
-      Other
-    </div>
- </div>
-
-
-					<!-- The Item List -->
-
-{{#each Items}}
-<div class="itemDatabase">
-<ul data-role="listview" data-inset="true" data-icon="delete">
-    <li><a href="#">
-		<h2>{{name}}</h2>
-		<p class="ui-li-aside"><strong>${{price}}</strong></p>
-		<p><i><strong>{{priority}}</strong></i></p>
-
-	</a></li>
-</ul>
-</div>
-
-{{/each}}
-
-<a href="#addItem" class="addbtn" data-role="button">Add Item</a>
-
-{{else}}
-
-<!-- Date -->
-
-		<!-- get today -->
-		<div id="demo" style="padding: 20px;"></div>
-		<div>
-			<button id="dateToday.js" class="btn btn-primary btn-lg btn-responsive" onclick="window.location='calendar.html'">
-			Calendar
-			</button>
-		<!-- end today -->
-
-		<a href="#addItem" class="addbtn" data-role="button">Add Item</a>
-		</div>
-
- 	<!-- Progress bar 
- 		https://codepen.io/cliffpyles/pen/xbsiC -->
-	<!-- <div id="page" class="page">
-	  <div class="progress-bar">
-		  <canvas id="inactiveProgress" class="progress-inactive" height="275px" width="275px"></canvas>
-	    <canvas id="activeProgress" class="progress-active"  height="275px" width="275px"></canvas>
-	    <p>0%</p>
-	  </div><br />
-	  <div id="progressControllerContainer">
-	    <input type="range" id="progressController" min="0" max="100" value="15" />
-	  </div>
-	  <script src="/js/progressBar.js"></script>
-	</div>-->
-
-<div class="progress" style="margin-bottom:0; height: 20px;">
-    <div class="progress-bar progress-bar-success" role="progressbar" style="width:25%; height: 20px;">
-      Need
-    </div>
-    <div class="progress-bar progress-bar-warning" role="progressbar" style="width:5.25%; height: 20px;">
-      Treat
-    </div>
-    <div class="progress-bar progress-bar-danger" role="progressbar" style="width:30%; height: 20px;">
-      Other
-    </div>
- </div>
-
-
-					<!-- The Item List -->
-
-{{#each Items}}
-<div class="itemDatabase">
-<ul data-role="listview" data-inset="true" data-icon="delete">
-    <li><a href="#">
-		<h2>{{name}}</h2>
-		<p class="ui-li-aside"><strong>${{price}}</strong></p>
-		<p><i><strong>{{priority}}</strong></i></p>
-
-	</a></li>
-</ul>
-</div>
-{{/each}}
-
-	{{/if}}
-</div><!-- /content -->
-
-
-<!-- Start of third page -->
-
-<!-- /header -->
-<div data-role="page" id="addItem">
-
-
-	<div data-role="header">
-			<a href="#mainPage" data-role="button">Home</a>
-		<h1 style="font-size: 2em;">Mind Bud</h1>
-	</div><!-- /header -->
-
-	<div role="main" class="ui-content">
-
-	<form id="addItemForm" role="form" method="get" action="/add">
-		<h3>Add the details for this expense!</h3>
-		
-	    <div class="form-group">
-	      <label for="name"> Item Name:</label>
-	      <input type="text" class="form-control" id="item_name" placeholder="Item Name" name="name">
-	    </div>
-
-	    <div class="form-group">
-	      <label for="price">Item Price:</label>
-	      <input type="number" class="form-control" id="item_price" placeholder="e.g. 25.00" name="price" step=".01">
-	    </div>
-	    <div class="form-group">
-	    <fieldset class"form-check" data-role="controlgroup">
-			<legend>Categorize this expense:</legend>
-	     	<input type="radio" name="priority" id="need" value="Need" checked="checked"/>
-	     	<label for="need">Need</label>
-
-	     	<input type="radio" name="priority" id="treat" value="Treat"/>
-	     	<label for="treat">Treat</label>
-
-	     	<input type="radio" name="priority" id="other" value="Other"/>
-	     	<label for="other">Other</label>
-		</fieldset>
-		</div>
-
-
-
-	    <input type="submit" id="submitItem" class="btn btn-default"value="Submit"></input>
-
-
-	</form>
-
-
-	</div>
-	</div><!-- /content -->
-><!-- /page -->
-
-
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 {{> facebook}}
 <script src="/js/facebook.js"></script>
-<script src="/js/introHCI.js"></script>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114588990-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-114588990-2');
-</script>
-
-<script>
-	function setBudget() {
-    var x = document.getElementById("myBudget").value;
-    var y = "Today's Budget: $" + x + ".00.";
-    document.getElementById("demo").innerHTML = y;
-	}
-</script>
+<script src="js/index.js"></script>
 
 </body>
 </html>

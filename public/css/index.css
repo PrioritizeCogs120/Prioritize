@@ -1,132 +1,50 @@
 
-body {
-    positon:fixed;
-    padding: 10px;
+.body
+{
+width:1600px;
+height:auto;
+}
+
+#margin-left{
+    text-align: left;
+    padding: 5px;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 
-form {border: 3px solid #f1f1f1;}
-
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+.intro
+{
+    text-align: justify;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+#username{
+    positon:fixed;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
 }
 
-button:hover {
-    opacity: 0.8;
+
+#logintext{
+    positon:fixed;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
 }
 
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-}
-
-img.avatar {
-    width: 40%;
+#photo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
     border-radius: 50%;
+    padding: 20px;
 }
 
-.container {
-    padding: 16px;
-}
 
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-.project {
-     margin: auto;
-     background-color: white;
-     padding: 0px;
-     width: 525px;
-}
-
-.jumbotron p {
-     color: #6e6e6e;
-}
-
-.project button{
-     text-align: center;
-}
-
-.item_class {
-    font-size: 12pt;
-}
-
-.budgetList {
-    padding: 10px;
-}
-
-.budgetList p {
-    line-height: 1.5px;
-}
-
-.btn-group-date button{
-    margin: center;
-    color: white; /* White text */
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    float: right; /* Float the buttons side by side */
-}
-
-.info {
-    float: right;
-}
-
-#statusBar{
-    width:20%;
-    height:40%;
-    background: blue;
-}
-
-/* Create two unequal columns that floats next to each other */
-.row {
-    display: table;
-    width: 100%;
-}
-
-.column {
-        display: table-cell;
-}
-
-#column-left {
-    float: left;
-    width: 25%;
-    background-color: "#dfdfdf";
-}
-
-#column-right {
-    float: left;
-    background-color: solid-red;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 /*@media (max-width: 600px) {
